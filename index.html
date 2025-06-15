@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Y&Z Studio - Solusi Web Dynamic</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    :root {
+      --primary: #1b1f3a;
+      --secondary: #2a2e45;
+      --accent: #3498db;
+      --footer: #131626;
+      --text: #ffffff;
+      --glass: rgba(255, 255, 255, 0.05);
+      --border: rgba(255, 255, 255, 0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #0e101d, var(--primary));
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: var(--secondary);
+      padding: 1rem 2rem;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      backdrop-filter: blur(10px);
+    }
+
+    section {
+      padding: 2.5rem 1.5rem;
+    }
+
+    .pricing {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 2rem;
+    }
+
+    .price-card {
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 2rem;
+      width: 250px;
+      text-align: center;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .price-card h3 {
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .price-card p {
+      margin: 0.5rem 0;
+    }
+
+    .important {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    footer {
+      background-color: var(--footer);
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    .floating-btns {
+      position: fixed;
+      right: 1rem;
+      bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .floating-btns a {
+      background: var(--accent);
+      color: white;
+      padding: 0.8rem;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .accordion {
+      margin: 1rem 0;
+    }
+
+    .accordion-item {
+      background-color: var(--glass);
+      border-radius: 0.5rem;
+      border: 1px solid var(--border);
+      margin-bottom: 0.7rem;
+    }
+
+    .accordion-title {
+      padding: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .accordion-content {
+      padding: 0 1rem 1rem;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>Y&Z Studio - Web Dinamis & Kreatif</header>
+
+  <section>
+    <h2>Paket Harga</h2>
+    <div class="pricing">
+      <div class="price-card">
+        <h3>Basic</h3>
+        <p><strong>Rp299.000</strong></p>
+        <p>1–2 Halaman</p>
+        <p>1x Revisi</p>
+        <p>3 Hari Kerja</p>
+      </div>
+      <div class="price-card">
+        <h3>Pro</h3>
+        <p><strong>Rp499.000</strong></p>
+        <p>3 Halaman</p>
+        <p>2x Revisi</p>
+        <p>3–5 Hari Kerja</p>
+      </div>
+      <div class="price-card">
+        <h3>Premium</h3>
+        <p><strong>Rp899.000</strong></p>
+        <p>6 Halaman</p>
+        <p>3x Revisi</p>
+        <p>5–7 Hari Kerja</p>
+      </div>
+      <div class="price-card">
+        <h3>Custom</h3>
+        <p><strong>Mulai dari Rp1.000.000</strong></p>
+        <p>Full Bebas</p>
+        <p>3x+ Revisi</p>
+        <p>5–10 Hari Kerja</p>
+      </div>
+    </div>
+    <p style="margin-top: 2rem">Harga dapat berubah tergantung tingkat kesulitan. <span class="important">Pembayaran melalui Dana (No. sama dengan WhatsApp)</span> sistem 50% awal, 50% setelah selesai.</p>
+  </section>
+
+  <section>
+    <h2>Q&A - FAQ</h2>
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-title" onclick="toggleAccordion(this)">Berapa lama pengerjaan web?</div>
+        <div class="accordion-content">Minimal 3 hari kerja, tergantung paket dan tingkat kerumitan.</div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-title" onclick="toggleAccordion(this)">Apakah bisa revisi?</div>
+        <div class="accordion-content">Ya, sesuai dengan jumlah revisi dalam paket yang dipilih. Tambahan revisi dikenakan biaya Rp50.000/revisi.</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Rekrutmen</h2>
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-title" onclick="toggleAccordion(this)">Apakah sedang membuka mitra?</div>
+        <div class="accordion-content">Saat ini kami belum membuka rekrutmen mitra. Tetap ikuti informasi terbaru melalui sosial media kami.</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Y&Z Studio - Powered by AI & Human Creativity</p>
+  </footer>
+
+  <div class="floating-btns">
+    <a href="https://wa.me/6285720906090" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="mailto:yudabastard84@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+  </div>
+
+  <script>
+    function toggleAccordion(element) {
+      const content = element.nextElementSibling;
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+
+</html>
